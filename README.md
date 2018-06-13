@@ -36,8 +36,9 @@ Input files could cover as JSON or some other metadata with the following input:
     port: 30001,
     targetPort: 30001,
     imagePullPolicy: Always,
-    type: Deployment | Service
 }
 ```
+
+And the file type can be inferred from the extension. (Could be either .deployment.json or .service.json)
 
 Incoming ideas are also welcome :)

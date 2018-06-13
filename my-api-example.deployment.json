@@ -6,6 +6,5 @@
     "port": 30001,
     "targetPort": 30001,
     "imagePullPolicy": "Always",
-    "type": "Deployment",
     "namespace": "namespace",
 }

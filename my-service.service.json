@@ -5,4 +5,6 @@
     "protocol": "TCP",
     "port": 30001,
     "targetPort": 30001,
+    "app-selector": "application-name",
+    "service-type": "NodePort"
 }
