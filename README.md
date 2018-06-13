@@ -1,12 +1,14 @@
 Hiatus
 ======
-Some people of my team do not like to write k8 files because they tend to think it is too verbose and not worth thinking of.
+Some people of my team do not like to write k8 files because they tend to think it is too verbose and not easy to thinking of.
+
+Think that *not only* SRE perform their long YAML writing job (if thats the case) but developers and some enthusiasts also like to perform quick tests and deploy stuff.
 
 JSON version based are also not straightforward and do have some crazy compatibility with k8s.
 
 So I thought of Hiatus.
 
-Hiatus is a proposal of a tool that is capable of replacing and creating Kubernetes files (deployments, services) from reading metadata input such as json.
+Hiatus is a proposal of a tool that is capable of replacing and creating Kubernetes files (deployments, services) from reading metadata input such as json. Also I do think that most CLIs-based would have to deal with too many options and parse a lot of stuff.
 
 Parsing
 -------
