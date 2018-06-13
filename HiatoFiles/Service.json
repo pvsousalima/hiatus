@@ -1,0 +1,8 @@
+{
+    "apiVersion": "v1",
+    "sevice-name": "sevice-name",
+    "namespace": "namespace",
+    "protocol": "TCP",
+    "port": 30001,
+    "targetPort": 30001,
+}

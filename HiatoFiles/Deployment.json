@@ -1,0 +1,11 @@
+{
+    "apiVersion": "apps/v1beta2",
+    "registry": "gcr.io",
+    "project-id": "my-registry-project-id",
+    "application-name": "my-api-example",
+    "port": 30001,
+    "targetPort": 30001,
+    "imagePullPolicy": "Always",
+    "type": "Deployment",
+    "namespace": "namespace",
+}

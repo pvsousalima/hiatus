@@ -4,7 +4,7 @@ Some people of my team do not like to write k8 files because they tend to think 
 
 JSON version based are also not straightforward and do have some crazy compatibility with k8s.
 
-So I bring Hiatus.
+So I thought of Hiatus.
 
 Hiatus is a proposal of a tool that is capable of replacing and creating Kubernetes files (deployments, services) from reading metadata input such as json.
 
@@ -15,7 +15,7 @@ I have been thinking something like a simple sed to parse the streaming input an
 
 ``` ssh
 sed "
-s/<deployment-ver>/$(git rev-parse HEAD)/g; 
+s/<deployment-ver>/$(git rev-parse HEAD)/g;
 s/<application-name>/my-api-example/g;
 s/<project-id>/my-project-id/g;
 s/<registry>/myregistry/g" Kubernetes/deployment.yaml | kubectl apply -f -
@@ -26,7 +26,7 @@ However I think that some templating would do better, as the tool would be also 
 Input
 -----
 
-Input files could cover as JSON or some other metadata with the following input: 
+Input files could cover as JSON or some other metadata with the following input:
 
 ```
 {
@@ -36,7 +36,7 @@ Input files could cover as JSON or some other metadata with the following input:
     port: 30001,
     targetPort: 30001,
     imagePullPolicy: Always,
-    type: Deployment | Service 
+    type: Deployment | Service
 }
 ```
 

@@ -1,4 +1,4 @@
-apiVersion: apps/v1beta2
+apiVersion: <apiVersion>
 kind: Deployment
 metadata:
   name: <application-name>
@@ -15,4 +15,4 @@ spec:
       labels:
         app: <application-name>
     spec:
-      containers: <containers>
+      containers: <containers-list>
