@@ -15,10 +15,10 @@ I have been thinking something like a simple sed to parse the streaming input an
 
 ``` ssh
 sed "
-s/<latest-ver>/$(git rev-parse HEAD)/g; 
+s/<deployment-ver>/$(git rev-parse HEAD)/g; 
 s/<application-name>/my-api-example/g;
 s/<project-id>/my-project-id/g;
-s/<registry>/gcr.io/g" Kubernetes/deployment.yaml | kubectl apply -f -
+s/<registry>/myregistry/g" Kubernetes/deployment.yaml | kubectl apply -f -
 ```
 
 However I think that some templating would do better, as the tool would be also capable of creating a whole deployment file from multiple templates.
@@ -27,7 +27,6 @@ Input
 -----
 
 Input files could cover as JSON or some other metadata with the following input: 
-
 
 ```
 {

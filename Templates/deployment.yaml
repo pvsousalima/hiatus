@@ -1,0 +1,18 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: <application-name>
+  namespace: <namespace>
+  labels:
+    app: <application-name>
+spec:
+  replicas: <replicas>
+  selector:
+    matchLabels:
+      app: <application-name>
+  template:
+    metadata:
+      labels:
+        app: <application-name>
+    spec:
+      containers: <containers>

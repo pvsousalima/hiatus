@@ -1,0 +1,22 @@
+- name: <application-name>
+  image: <registry>/<project-id>/<application-name>:<latest-ver>
+  env:
+    - name: MONGO_URL
+      value: "mongodb://mongo"
+    - name: MONGO_PASSWORD
+      value: "value"
+  imagePullPolicy: <imagePullPolicy>
+  ports:
+  - containerPort: <containerPort>
+  resources:
+      requests:
+        cpu: 50m
+        memory: 100Mi
+  readinessProbe:
+    httpGet:
+      path: <readinessProbePath>
+      port: <readinessProbePort>
+    initialDelaySeconds: 60
+    timeoutSeconds: 5
+    successThreshold: 30
+    failureThreshold: 40
