@@ -1,8 +1,12 @@
 Hiatus
 ======
+Some people of my team do not like to write k8 files because they tend to think it is too verbose and not worth thinking of.
+
+JSON version based are also not straightforward and do have some crazy compatibility with k8s.
+
+So I bring Hiatus.
 
 Hiatus is a proposal of a tool that is capable of replacing and creating Kubernetes files (deployments, services) from reading metadata input such as json.
-
 
 Parsing
 -------
