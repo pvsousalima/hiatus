@@ -7,7 +7,7 @@ Hiatus is a proposal of a tool that is capable of replacing and creating Kuberne
 Parsing
 -------
 
-I have been thinking something like a simple sed to parse the streaming input and replace internal variables
+I have been thinking something like a simple sed to parse the streaming input and replace internal variables.
 
 ``` ssh
 sed "
@@ -17,17 +17,19 @@ s/<project-id>/my-project-id/g;
 s/<registry>/gcr.io/g" Kubernetes/deployment.yaml | kubectl apply -f -
 ```
 
+However I think that some templating would do better, as the tool would be also capable of creating a whole deployment file from multiple templates.
+
 Input
 -----
 
 Input files could cover as JSON or some other metadata with the following input: 
 
 
-``` json
+```
 {
     registry: gcr.io,
-    project-id: my-project-id,
-    application-name: my-api-example,
+    projectid: my-project-id,
+    applicationname: my-api-example,
     port: 30001,
     targetPort: 30001,
     imagePullPolicy: Always,
