@@ -1,5 +1,5 @@
 - name: <application-name>
-  image: <registry>/<project-id>/<application-name>:<latest-ver>
+  image: <image>
   env:
     - name: MONGO_URL
       value: "mongodb://mongo"
