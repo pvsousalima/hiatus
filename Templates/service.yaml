@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: <sevice-name>
+  namespace: <namespace>
+spec:
+  ports:
+     -  protocol: <portProtocol>
+        port: <port>
+        targetPort: <targetPort>
+  selector:
+    app: <application-name>
+  type: <service-type>
